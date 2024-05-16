@@ -2,7 +2,7 @@
 const request = require('request');
 request(process.argv[2], function (error, response, body) {
   if (error) {
-      console.log(error);
+    console.log(error);
   }
   const completed = {};
   for (const task of JSON.parse(body)) {
