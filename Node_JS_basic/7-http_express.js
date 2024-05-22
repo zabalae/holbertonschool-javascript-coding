@@ -20,10 +20,10 @@ app.get('/students', async (req, res) => {
     res.write(`Number of students in SWE: ${data.sweStudents.length}. List: ${data.sweStudents.join(', ')}`);
     res.end();
   }).catch((err) => res.end(err.message))
-      .finally(() => {
-          res.end();
-        });
-  });
+    .finally(() => {
+      res.end();
+    });
+});
 
 app.listen(port, host, () => {
   console.log(`Server running at http://${host}:${port}`);
